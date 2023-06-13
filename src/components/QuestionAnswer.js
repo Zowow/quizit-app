@@ -52,7 +52,6 @@ const QuestionAnswer = () => {
 
     const handleQuiz = (event) => {
         event.preventDefault();
-
         const updatedScore = apiData.reduce((acc, item, index) => {
             if (item.correct_answer === answers[index]) {
             return acc + 1;

@@ -4,8 +4,8 @@ import QuestionAnswer from "./components/QuestionAnswer"
 
 function App() {
 
-  const [start, setStart] = React.useState(true)
-  const [done, setDone] = React.useState(true)
+  const [start, setStart] = React.useState(false)
+
   const clickStart = () => {
     setStart(true)
   }
@@ -30,8 +30,6 @@ function App() {
         mx-auto
       ">
         <QuestionAnswer />
-        {done && <p className="mx-auto mt-4 w-3/6">You scored 3/5 correct answers</p> }
-        {done && <button className="block mx-auto mt-2 mb-12 px-4 py-2">Play Again</button>}
       </div>
     )
   }

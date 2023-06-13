@@ -72,7 +72,7 @@ body{
   transition: 0.3s;
 }
 
-.App--run > p {
+.quiz > p {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
@@ -81,7 +81,7 @@ body{
   color: #393939;
 }
 
-.App--run > button{
+.quiz > button{
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;

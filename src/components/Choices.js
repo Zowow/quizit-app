@@ -9,19 +9,11 @@ const Choices = (props) => {
         setChoices(prevData => [...prevData].sort(() => Math.random() - 0.5))
     },[])
 
-    // console.log(choices)
-
-    // console.log(ans)
 
     const handleAnswer = (event) => {
         const {value} = event.target
-        // setAns(prevAns => ({
-        //     ...prevAns,
-        //     answer: value
-        // }))
         setAns({answer: value})
-        console.log(ans)
-        props.passAns(ans);
+        props.passAns(value);
     }
 
     const mapChoices = choices.map((item, index) => {
@@ -34,6 +26,7 @@ const Choices = (props) => {
                 value={item}
                 checked={ans.answer === item}
                 onChange={handleAnswer}
+                disabled={props.disable}
                 />
                 <label className="px-4 py-0.5 mb-2 mr-4 whitespace-nowrap"  
                 htmlFor={`choice-${props.id}_${index}`}>{item}</label>
